@@ -3,23 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
-
+    app:startDestination="@id/nav_home">
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.homebook.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
-
+        android:id="@+id/nav_home"
+        android:name="com.example.homebook.HomePageFragment"
+        android:label="homebook"
+        tools:layout="@layout/fragment_home_page" />
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.homebook.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
-
+        android:id="@+id/nav_mortgage"
+        android:name="com.example.homebook.MortgageFragment"
+        android:label="Mortgage Calculator"
+        tools:layout="@layout/fragment_mortgage" />
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.homebook.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/nav_contact"
+        android:name="com.example.homebook.ContactPageFragment"
+        android:label="Contact"
+        tools:layout="@layout/fragment_contact_page" />
+    <fragment
+        android:id="@+id/nav_jobs"
+        android:name="com.example.homebook.JobsFragment"
+        android:label="homebook Jobs"
+        tools:layout="@layout/fragment_jobs" />
 </navigation>
