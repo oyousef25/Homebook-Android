@@ -27,8 +27,8 @@ public class HousesFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private String mParam4;
     private Integer mParam3;
+    private String mParam4;
 
     public HousesFragment() {
         // Required empty public constructor

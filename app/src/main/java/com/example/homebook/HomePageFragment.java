@@ -69,7 +69,9 @@ public class HomePageFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home_page, container, false);
 
-
+        CustomViewPageAdapter adapter = new CustomViewPageAdapter(getChildFragmentManager());
+        ViewPager viewPager = view.findViewById(R.id.albumContent);
+        viewPager.setAdapter(adapter);
 
         return view;
     }
@@ -85,18 +87,16 @@ public class HomePageFragment extends Fragment {
         public Fragment getItem(int position) {
             //Showing the viewPager slides
             switch (position){
-                case 0: return HousesFragment.newInstance(getString(R.string.first_title), getString(R.string.first_description), R.drawable.animals_app);
-                case 1: return HousesFragment.newInstance(getString(R.string.second_title), getString(R.string.second_description), R.drawable.destination_app);
-                case 2: return HousesFragment.newInstance(getString(R.string.third_title), getString(R.string.third_description), R.drawable.hobby_app);
-                case 3: return HousesFragment.newInstance(getString(R.string.fourth_title), getString(R.string.fourth_description), R.drawable.job_app);
-                default: return HousesFragment.newInstance("404 not found", "", R.drawable.job_app);
+                case 0: return HousesFragment.newInstance(getString(R.string.first_price), getString(R.string.first_address), R.drawable.first_home, getString(R.string.first_details));
+                case 1: return HousesFragment.newInstance(getString(R.string.second_price), getString(R.string.second_address), R.drawable.second_home, getString(R.string.second_details));
+                default: return null;
             }
         }
 
         @Override
         public int getCount() {
             //Returning only our 4 values
-            return 4;
+            return 2;
         }
     }
 }
