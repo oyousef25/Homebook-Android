@@ -3,4 +3,19 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <!--
+        FIRST HOUSE
+    -->
+    <string name="first_price">$799.900</string>
+    <string name="first_address">1328 Manzanillo Crescent</string>
+    <string name="first_details">4 bed | 2 bath</string>
+
+
+    <!--
+        SECOND HOUSE
+    -->
+    <string name="second_price">$999.900</string>
+    <string name="second_address">1214 Kenwick Way</string>
+    <string name="third_address">6 bed | 3 bath</string>
 </resources>
