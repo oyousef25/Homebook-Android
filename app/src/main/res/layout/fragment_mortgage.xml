@@ -1,14 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginLeft="10sp"
+    android:layout_marginTop="70sp"
+    android:layout_marginRight="10sp"
+    android:columnCount="2"
+    android:useDefaultMargins="true"
     tools:context=".MortgageFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/loanTextView"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="1"
+        android:ems="10"
+        android:text="House Price"
+        android:textColor="#040303" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/loanAmount"
+        android:layout_width="272dp"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="1"
+        android:background="@color/colorAccent"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/downTextView"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="1"
+        android:ems="10"
+        android:text="Down Payment"
+        android:textColor="#040303" />
+
+    <EditText
+        android:id="@+id/downPayment"
+        android:layout_width="272dp"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="1"
+        android:background="@color/colorAccent"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/percentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3%"
+        android:textColor="#040303" />
+
+    <SeekBar
+        android:id="@+id/percentSeekBar"
+        android:layout_width="177dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:max="7"
+        android:progress="1" />
+
+    <TextView
+        android:id="@+id/yearsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5 Year(s)"
+        android:textColor="#040303" />
+
+    <SeekBar
+        android:id="@+id/yearsSeekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:max="25"
+        android:progress="5" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monthly Payment"
+        android:textColor="#040303" />
+
+    <TextView
+        android:id="@+id/monthlyPayment"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:background="@color/colorAccent"
+        android:gravity="right"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Payment"
+        android:textColor="#040303" />
+
+    <TextView
+        android:id="@+id/totalPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:background="@color/colorAccent"
+        android:gravity="right"
+        android:padding="10dp" />
+
+</GridLayout>
