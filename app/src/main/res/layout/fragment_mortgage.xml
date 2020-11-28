@@ -3,16 +3,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginLeft="10sp"
+    android:layout_marginTop="70sp"
+    android:layout_marginRight="10sp"
     android:columnCount="2"
     android:useDefaultMargins="true"
     tools:context=".MortgageFragment">
 
+    <TextView
+        android:id="@+id/loanTextView"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="1"
+        android:ems="10"
+        android:text="House Price" />
+
     <EditText
         android:id="@+id/loanAmount"
-        android:layout_width="match_parent"
+        android:layout_width="272dp"
         android:layout_height="wrap_content"
-        android:layout_columnSpan="2"
-        android:layout_margin="50sp"
+        android:layout_columnSpan="1"
+        android:background="@color/colorAccent"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/downTextView"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="1"
+        android:ems="10"
+        android:text="Down Payment" />
+
+    <EditText
+        android:id="@+id/downPayment"
+        android:layout_width="272dp"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="1"
         android:background="@color/colorAccent"
         android:ems="10"
         android:inputType="numberDecimal"
@@ -26,7 +54,7 @@
 
     <SeekBar
         android:id="@+id/percentSeekBar"
-        android:layout_width="wrap_content"
+        android:layout_width="177dp"
         android:layout_height="wrap_content"
         android:layout_gravity="fill_horizontal"
         android:max="7"
@@ -54,7 +82,7 @@
 
     <TextView
         android:id="@+id/monthlyPayment"
-        android:layout_width="wrap_content"
+        android:layout_width="145dp"
         android:layout_height="wrap_content"
         android:layout_gravity="fill_horizontal"
         android:background="@color/colorAccent"
