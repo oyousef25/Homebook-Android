@@ -13,9 +13,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * A simple {@link Fragment} subclass.
- * Use the {@link HomePageFragment#newInstance} factory method to
- * create an instance of this fragment.
+ * Home Page:
+ * This page will include:
+ * 1. A houses viewPager
+ * 2. A houses ListView
+ * 3. A menu that sends the user to the Credits and Realtors pages
+ * @author Omar Yousef
+ * @version 1.0
+ * @since NOV 15th
  */
 public class HomePageFragment extends Fragment {
 

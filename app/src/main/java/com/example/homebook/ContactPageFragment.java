@@ -9,9 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * A simple {@link Fragment} subclass.
- * Use the {@link ContactPageFragment#newInstance} factory method to
- * create an instance of this fragment.
+ * Contact Page:
+ * This Page will hold the company's contact information
+ * @author Omar Yousef
+ * @version 1.0
+ * @since NOV 27
  */
 public class ContactPageFragment extends Fragment {
 

@@ -9,9 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * A simple {@link Fragment} subclass.
- * Use the {@link JobsFragment#newInstance} factory method to
- * create an instance of this fragment.
+ * Jobs Fragment:
+ * This Page will have a form that allows the user to enter their data and sends it to the company
+ * @author Omar Yousef
+ * @version 1.0
+ * @since NOV 27
  */
 public class JobsFragment extends Fragment {
 
