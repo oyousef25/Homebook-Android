@@ -16,7 +16,8 @@
         android:layout_height="wrap_content"
         android:layout_columnSpan="1"
         android:ems="10"
-        android:text="House Price" />
+        android:text="House Price"
+        android:textColor="#040303" />
 
     <EditText
         android:id="@+id/loanAmount"
@@ -34,7 +35,8 @@
         android:layout_height="wrap_content"
         android:layout_columnSpan="1"
         android:ems="10"
-        android:text="Down Payment" />
+        android:text="Down Payment"
+        android:textColor="#040303" />
 
     <EditText
         android:id="@+id/downPayment"
@@ -50,7 +52,8 @@
         android:id="@+id/percentTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="3%" />
+        android:text="3%"
+        android:textColor="#040303" />
 
     <SeekBar
         android:id="@+id/percentSeekBar"
@@ -64,7 +67,8 @@
         android:id="@+id/yearsTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="5 Year(s)" />
+        android:text="5 Year(s)"
+        android:textColor="#040303" />
 
     <SeekBar
         android:id="@+id/yearsSeekBar"
@@ -78,7 +82,8 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Monthly Payment" />
+        android:text="Monthly Payment"
+        android:textColor="#040303" />
 
     <TextView
         android:id="@+id/monthlyPayment"
@@ -93,7 +98,8 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Total Payment" />
+        android:text="Total Payment"
+        android:textColor="#040303" />
 
     <TextView
         android:id="@+id/totalPayment"
