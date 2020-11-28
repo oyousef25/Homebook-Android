@@ -1,5 +1,7 @@
 package com.example.homebook;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +9,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 /**
  * Contact Page:
@@ -61,6 +65,78 @@ public class ContactPageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_contact_page, container, false);
+        View view = inflater.inflate(R.layout.fragment_contact_page, container, false);
+
+        //Call Button
+        Button callButton = view.findViewById(R.id.callButton);
+        callButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri number = Uri.parse("tel:+12997765743");
+                Intent intent = new Intent(Intent.ACTION_DIAL, number);
+                if (intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(getContext(), "No app installed", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        //Text Button
+        Button textButton = view.findViewById(R.id.textButton);
+        textButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("smsto:+12997765743"));
+                intent.putExtra("sms_body", "Hi homebook!");
+                if (intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(getContext(), "No app installed", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        //E-mail Button
+        Button emailButton = view.findViewById(R.id.emailButton);
+        emailButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String[] emailAddress = {"mailto:w0753671@myscc.ca"};
+                String[] ccEmail = {"techsupport@omarYousef.com"};
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("mailto:"));
+
+                //Adding extra email, cc, subject and email body
+                intent.putExtra(Intent.EXTRA_EMAIL, emailAddress);
+                intent.putExtra(Intent.EXTRA_CC, ccEmail);
+                intent.putExtra(Intent.EXTRA_SUBJECT, "I'm Looking to contact homebook':");
+                intent.putExtra(Intent.EXTRA_TEXT, "I like your professional looking app");
+
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(getContext(), "No app installed", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        //Location Button
+        Button locationButton = view.findViewById(R.id.mapButton);
+        locationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri location = Uri.parse("geo:22.27307,-63.0512688&q=business");
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                if (intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(getContext(), "No app installed", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        return view;
     }
 }
