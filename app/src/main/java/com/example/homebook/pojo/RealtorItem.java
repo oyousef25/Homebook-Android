@@ -1,5 +1,13 @@
 package com.example.homebook.pojo;
 
+/**
+ * RealtorItem Class:
+ * We will use this class to make a new instance of the Realtor object
+ *
+ * @author Omar Yousef
+ * @version 1.0
+ * @since 4th December
+ */
 public class RealtorItem {
     private String name;
     private String address;
