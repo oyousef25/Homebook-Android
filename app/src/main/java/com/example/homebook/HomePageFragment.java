@@ -9,8 +9,12 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.zip.Inflater;
 
 /**
  * Home Page:
@@ -71,6 +75,11 @@ public class HomePageFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        /*
+            Adding a menu to the homepage fragment
+         */
+        setHasOptionsMenu(true);
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home_page, container, false);
 
@@ -110,5 +119,13 @@ public class HomePageFragment extends Fragment {
             //Returning only our 4 values
             return 9;
         }
+    }
+
+    /**
+     * Adding a menu items to the homePage Fragment
+     * @param menu
+     */
+    public void onPrepareOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_main, menu);
     }
 }
