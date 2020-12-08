@@ -2,19 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_realtors"
+        android:id="@+id/action_settings"
+        android:icon="@drawable/settings"
+        android:title="Settings"
         android:orderInCategory="1"
-        android:title= "Realtors"
-        app:showAsAction="never"/>
-
-    <item
-        android:id="@+id/action_credits"
-        android:orderInCategory="2"
-        android:title= "Credits"
-        app:showAsAction="never"/>
-
-    <item
-        android:id="@+id/action_list"
-        android:title= "List"
         app:showAsAction="always"/>
 </menu>

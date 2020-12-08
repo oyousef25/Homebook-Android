@@ -56,11 +56,9 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.action_realtors){
-
-        }else if (id == R.id.action_credits){
-
+        if (id == R.id.action_settings){
         }
+
 
         return super.onOptionsItemSelected(item);
     }
