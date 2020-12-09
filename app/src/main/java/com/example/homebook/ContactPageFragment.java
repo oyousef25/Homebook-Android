@@ -4,9 +4,13 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -65,7 +69,9 @@ public class ContactPageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_contact_page, container, false);
+        final View view = inflater.inflate(R.layout.fragment_contact_page, container, false);
+
+        setHasOptionsMenu(true);
 
         //Call Button
         Button callButton = view.findViewById(R.id.callButton);
@@ -137,6 +143,35 @@ public class ContactPageFragment extends Fragment {
             }
         });
 
+        //Realtors Button
+        Button realtorsButton = view.findViewById(R.id.realtorsButton);
+        realtorsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(view)
+                        .navigate(R.id.action_nav_contact_to_realtorsFragment);
+            }
+        });
+
+        //Credits Button
+        Button creditsButton = view.findViewById(R.id.creditsButton);
+        creditsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(view)
+                        .navigate(R.id.action_nav_contact_to_creditsFragment);
+            }
+        });
+
         return view;
+    }
+
+    /*
+        Hide menu
+     */
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        menu.clear();
     }
 }

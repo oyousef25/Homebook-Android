@@ -13,6 +13,7 @@
         android:fontFamily="serif"
         android:gravity="center"
         android:text="Homebook"
+        android:textColor="#FDFBFB"
         android:textSize="@dimen/appsTitle" />
 
 </LinearLayout>

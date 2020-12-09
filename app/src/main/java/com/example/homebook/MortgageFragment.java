@@ -2,11 +2,14 @@ package com.example.homebook;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
@@ -96,6 +99,8 @@ public class MortgageFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_mortgage, container, false);
+
+        setHasOptionsMenu(true);
 
         /*
             Locating the XML elements and storing them in variables
@@ -259,5 +264,14 @@ public class MortgageFragment extends Fragment {
         //Calculate the total cost
         totalCost.setText(currencyFormat.format(totalPayment));
 
+    }
+
+    /*
+        Hide menu
+     */
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        menu.clear();
     }
 }

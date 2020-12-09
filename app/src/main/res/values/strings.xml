@@ -13,6 +13,23 @@
     <string name="jobs_title">Are you a Realtor? \n Contact Us !</string>
 
 
+    <!--
+        Credits PAGE
+    -->
+    <string name="credits_title">Are you a Realtor? \n Contact Us !</string>
+
+    <string name="author_name">Omar Yousef (Author)</string>
+    <string name="instructor_name">Câi Filiault (Professor)</string>
+
+    <string name="pictures_title">Assets Sources</string>
+    <string name="pictures_source1">Android Stocks</string>
+    <string name="pictures_source2">Unsplash.com</string>
+
+    <string name="softwares_title">Softwares Used</string>
+    <string name="software1">Android Studio</string>
+    <string name="software2">Drawio</string>
+    <string name="software3">Github</string>
+
 
     <!--
         FIRST HOUSE
