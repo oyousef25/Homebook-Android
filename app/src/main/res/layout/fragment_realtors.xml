@@ -9,6 +9,6 @@
     <ListView
         android:id="@+id/RealtorsList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="542dp"
         android:layout_weight="1"></ListView>
 </FrameLayout>

@@ -78,8 +78,10 @@ public class RealtorsFragment extends Fragment {
 
         //Storing Realtor companies and their data in the RealtorItem ArrayList
         realtorItems.add(new RealtorItem("Omario States", "1836 Oullette Ave", "(226)549-8769"));
-        realtorItems.add(new RealtorItem("Homevalley", "5842 Pioneer", "(226)584-3568"));
+        realtorItems.add(new RealtorItem("Homesvalley", "5842 Pioneer", "(226)584-3568"));
         realtorItems.add(new RealtorItem("homeez INC.", "3964 Malden Rd", "(226)530-8100"));
+        realtorItems.add(new RealtorItem("DealSteal", "1214 howard Ave", "(226)506-4853"));
+        realtorItems.add(new RealtorItem("homeez INC.", "3247 walker Rd", "(226)902-4963"));
 
         //Set the Adapter
         realtorsList.setAdapter(new CustomListViewAdapter(getContext(), realtorItems));
