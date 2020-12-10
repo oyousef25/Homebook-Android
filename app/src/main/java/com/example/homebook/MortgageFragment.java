@@ -108,11 +108,9 @@ public class MortgageFragment extends Fragment {
 
         //Loan Amount Edit Text and TextView
         loanAmountEditText = view.findViewById(R.id.loanAmount);
-        loanAmountTextview = view.findViewById(R.id.loanTextView);
 
         //Down Payment Edit Text And TextView
         downPaymentEditText = view.findViewById(R.id.downPayment);
-        downTextview = view.findViewById(R.id.downTextView);
 
         //Percent TextView and SeekBar
         percentTextView = view.findViewById(R.id.percentTextView);
