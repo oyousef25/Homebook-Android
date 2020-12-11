@@ -41,4 +41,9 @@
         android:name="com.example.homebook.RealtorsFragment"
         android:label="fragment_realtors"
         tools:layout="@layout/fragment_realtors" />
+    <fragment
+        android:id="@+id/nav_list"
+        android:name="com.example.homebook.HousesList"
+        android:label="fragment_houses_list"
+        tools:layout="@layout/fragment_houses_list" />
 </navigation>
