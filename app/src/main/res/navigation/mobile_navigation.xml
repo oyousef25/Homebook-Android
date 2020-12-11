@@ -18,10 +18,32 @@
         android:id="@+id/nav_contact"
         android:name="com.example.homebook.ContactPageFragment"
         android:label="Contact"
-        tools:layout="@layout/fragment_contact_page" />
+        tools:layout="@layout/fragment_contact_page" >
+        <action
+            android:id="@+id/action_nav_contact_to_realtorsFragment"
+            app:destination="@id/realtorsFragment" />
+        <action
+            android:id="@+id/action_nav_contact_to_creditsFragment"
+            app:destination="@id/creditsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/nav_jobs"
         android:name="com.example.homebook.JobsFragment"
         android:label="homebook Jobs"
         tools:layout="@layout/fragment_jobs" />
+    <fragment
+        android:id="@+id/creditsFragment"
+        android:name="com.example.homebook.CreditsFragment"
+        android:label="fragment_credits"
+        tools:layout="@layout/fragment_credits" />
+    <fragment
+        android:id="@+id/realtorsFragment"
+        android:name="com.example.homebook.RealtorsFragment"
+        android:label="fragment_realtors"
+        tools:layout="@layout/fragment_realtors" />
+    <fragment
+        android:id="@+id/nav_list"
+        android:name="com.example.homebook.HousesList"
+        android:label="fragment_houses_list"
+        tools:layout="@layout/fragment_houses_list" />
 </navigation>

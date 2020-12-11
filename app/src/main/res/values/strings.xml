@@ -6,6 +6,31 @@
 
     <string name="hello_blank_fragment">Notifications</string>
 
+
+    <!--
+        JOBS PAGE
+    -->
+    <string name="jobs_title">Are you a Realtor? \n Contact Us !</string>
+
+
+    <!--
+        Credits PAGE
+    -->
+    <string name="credits_title">Are you a Realtor? \n Contact Us !</string>
+
+    <string name="author_name">Omar Yousef (Author)</string>
+    <string name="instructor_name">Câi Filiault (Professor)</string>
+
+    <string name="pictures_title">Assets Sources</string>
+    <string name="pictures_source1">Android Stocks</string>
+    <string name="pictures_source2">Unsplash.com</string>
+
+    <string name="softwares_title">Softwares Used</string>
+    <string name="software1">Android Studio</string>
+    <string name="software2">Drawio</string>
+    <string name="software3">Github</string>
+
+
     <!--
         FIRST HOUSE
     -->
@@ -20,4 +45,54 @@
     <string name="second_price">$999.900</string>
     <string name="second_address">1214 Kenwick Way</string>
     <string name="second_details">6 bed | 3 bath</string>
+
+    <!--
+        THIRD HOUSE
+    -->
+    <string name="third_price">$799.900</string>
+    <string name="third_address">1328 Highnoon Drive</string>
+    <string name="third_details">4 bed | 3 bath</string>
+
+    <!--
+        FOURTH HOUSE
+    -->
+    <string name="fourth_price">$1299.900</string>
+    <string name="fourth_address">1189 Pioneer</string>
+    <string name="fourth_details">5 bed | 2 bath</string>
+
+    <!--
+        FIFTH HOUSE
+    -->
+    <string name="fifth_price">$499.900</string>
+    <string name="fifth_address">1187 North Talbot</string>
+    <string name="fifth_details">3 bed | 2 bath</string>
+
+    <!--
+        SIXTH HOUSE
+    -->
+    <string name="sixth_price">$349.900</string>
+    <string name="sixth_address">7656 Mount Royal</string>
+    <string name="sixth_details">2 bed | 1 bath</string>
+
+    <!--
+        SEVENTH HOUSE
+    -->
+    <string name="seventh_price">$718.900</string>
+    <string name="seventh_address">1214 Oullette</string>
+    <string name="seventh_details">2 bed | 2 bath</string>
+
+    <!--
+        EIGHTH HOUSE
+    -->
+    <string name="eighth_price">$654.900</string>
+    <string name="eighth_address">560 Caron Ave</string>
+    <string name="eighth_details">4 bed | 3 bath</string>
+
+
+    <!--
+        NINTH HOUSE
+    -->
+    <string name="ninth_price">$999.900</string>
+    <string name="ninth_address">3984 SouthWood Lakes Dr</string>
+    <string name="ninth_details">8 bed | 4 bath</string>
 </resources>

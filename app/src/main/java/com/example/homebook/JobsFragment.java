@@ -1,17 +1,26 @@
 package com.example.homebook;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 /**
- * A simple {@link Fragment} subclass.
- * Use the {@link JobsFragment#newInstance} factory method to
- * create an instance of this fragment.
+ * Jobs Fragment:
+ * This Page will have a form that allows the user to enter their data and sends it to the company
+ * @author Omar Yousef
+ * @version 1.0
+ * @since NOV 27
  */
 public class JobsFragment extends Fragment {
 
@@ -59,6 +68,39 @@ public class JobsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_jobs, container, false);
+        View view = inflater.inflate(R.layout.fragment_jobs, container, false);
+        setHasOptionsMenu(true);
+
+        Button bookCallButton = view.findViewById(R.id.bookCallButton);
+        bookCallButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String[] emailAddress = {"mailto:w0753671@myscc.ca"};
+                String[] ccEmail = {"techsupport@omarYousef.com"};
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("mailto:"));
+
+                //Adding extra email, cc, subject and email body
+                intent.putExtra(Intent.EXTRA_EMAIL, emailAddress);
+                intent.putExtra(Intent.EXTRA_CC, ccEmail);
+                intent.putExtra(Intent.EXTRA_SUBJECT, "I'm Looking to work with homebook':");
+
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(getContext(), "No app installed", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        return view;
+    }
+
+    /*
+        Hide menu
+     */
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        menu.clear();
     }
 }

@@ -1,14 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".JobsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/textView"
+        android:layout_width="307dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="@string/jobs_title"
+        android:textAlignment="center"
+        android:textColor="#050505"
+        android:textSize="@dimen/jobTitle"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.423"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/editTextTextPersonName3"
+        android:layout_width="307dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="28dp"
+        android:background="#EDEAEA"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textAlignment="viewStart"
+        android:textColorHint="#ACA6A6"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName4"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName4"
+        android:layout_width="307dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="28dp"
+        android:background="#EDEAEA"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textAlignment="viewStart"
+        android:textColorHint="#ACA6A6"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName5"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName5"
+        android:layout_width="307dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="28dp"
+        android:background="#EDEAEA"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textAlignment="viewStart"
+        android:textColorHint="#ACA6A6"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName6"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName6"
+        android:layout_width="307dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="56dp"
+        android:background="#EDEAEA"
+        android:ems="10"
+        android:hint="City"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textAlignment="viewStart"
+        android:textColorHint="#ACA6A6"
+        app:layout_constraintBottom_toTopOf="@+id/bookCallButton"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/bookCallButton"
+        android:layout_width="144dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="164dp"
+        android:text="Book A call !"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

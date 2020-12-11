@@ -7,6 +7,11 @@
         android:title="homebook" />
 
     <item
+        android:id="@+id/nav_list"
+        android:icon="@drawable/recycler"
+        android:title="Houses List" />
+
+    <item
         android:id="@+id/nav_mortgage"
         android:icon="@drawable/mortgage"
         android:title="Mortgage Calculator" />
@@ -14,7 +19,7 @@
     <item
         android:id="@+id/nav_jobs"
         android:icon="@drawable/jobs"
-        android:title="homebook Jobs" />
+        android:title="homebook Jobs"/>
 
     <item
         android:id="@+id/nav_contact"

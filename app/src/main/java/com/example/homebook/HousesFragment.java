@@ -11,9 +11,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
- * A simple {@link Fragment} subclass.
- * Use the {@link HousesFragment#newInstance} factory method to
- * create an instance of this fragment.
+ * Houses Fragment:
+ * This Page will hold the viewPager and it's design
+ * @author Omar Yousef
+ * @version 1.0
+ * @since NOV 15th
  */
 public class HousesFragment extends Fragment {
 

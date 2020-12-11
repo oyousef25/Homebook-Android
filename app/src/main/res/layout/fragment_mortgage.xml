@@ -1,14 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MortgageFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/textView2"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="Mortgage Calculator"
+        android:textAlignment="center"
+        android:textColor="#040404"
+        android:textSize="@dimen/jobTitle"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/loanAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/loanAmount"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:background="#41B9BCBC"
+        android:ems="10"
+        android:hint="Home Price"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/downPayment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/downPayment"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_columnSpan="1"
+        android:layout_marginBottom="20dp"
+        android:background="#41B9BCBC"
+        android:ems="10"
+        android:hint="Down Payment"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/percentSeekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/percentSeekBar"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="12dp"
+        android:max="7"
+        android:progress="1"
+        app:layout_constraintBottom_toTopOf="@+id/yearsSeekBar"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/percentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="3%"
+        android:textColor="#040303"
+        app:layout_constraintBottom_toTopOf="@+id/yearsTextView"
+        app:layout_constraintEnd_toStartOf="@+id/percentSeekBar"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/yearsSeekBar"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="84dp"
+        android:max="25"
+        android:progress="5"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/yearsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5 Year(s)"
+        android:textColor="#040303"
+        app:layout_constraintEnd_toStartOf="@+id/yearsSeekBar"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/yearsSeekBar" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:background="#F3F0F0"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="Monthly Payment"
+        android:textAlignment="center"
+        android:textColor="#040404"
+        android:textSize="@dimen/house_address"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/monthlyPayment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/monthlyPayment"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginBottom="32dp"
+        android:background="#41B9BCBC"
+        android:gravity="right"
+        android:padding="10dp"
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:background="#F3F0F0"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="Total Payment"
+        android:textAlignment="center"
+        android:textColor="#040404"
+        android:textSize="@dimen/house_address"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/totalPayment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/totalPayment"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="fill_horizontal"
+        android:layout_marginBottom="116dp"
+        android:background="#41B9BCBC"
+        android:gravity="right"
+        android:padding="10dp"
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
